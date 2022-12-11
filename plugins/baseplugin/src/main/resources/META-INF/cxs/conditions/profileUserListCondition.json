@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "id": "profileUserListCondition",
+    "name": "profileUserListCondition",
+    "description": "",
+    "systemTags": [
+      "availableToEndUser",
+      "profileTags",
+      "aggregated",
+      "condition",
+      "profileCondition"
+    ],
+    "readOnly": true
+  },
+  "parentCondition": {
+    "type": "profilePropertyCondition",
+    "parameterValues": {
+      "propertyName": "systemProperties.lists",
+      "propertyValues": "parameter::lists",
+      "comparisonOperator": "parameter::matchType"
+    }
+  },
+
+  "parameters": [
+    {
+      "id": "lists",
+      "type": "string",
+      "multivalued": true
+    },
+    {
+      "id": "matchType",
+      "type": "string",
+      "multivalued": false
+    }
+  ]
+}

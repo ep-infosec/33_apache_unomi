@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "id": "pastEventCondition",
+    "name": "pastEventCondition",
+    "description": "",
+    "systemTags": [
+      "availableToEndUser",
+      "behavioral",
+      "profileTags",
+      "event",
+      "condition",
+      "profileCondition"
+    ],
+    "readOnly": true
+  },
+  "conditionEvaluator": "pastEventConditionEvaluator",
+  "queryBuilder": "pastEventConditionESQueryBuilder",
+
+  "parameters": [
+    {
+      "id": "numberOfDays",
+      "type": "integer",
+      "multivalued": false
+    },
+    {
+      "id": "fromDate",
+      "type": "date",
+      "multivalued": false
+    },
+    {
+      "id": "toDate",
+      "type": "date",
+      "multivalued": false
+    },
+    {
+      "id": "minimumEventCount",
+      "type": "integer",
+      "multivalued": false
+    },
+    {
+      "id": "maximumEventCount",
+      "type": "integer",
+      "multivalued": false
+    },
+    {
+      "id": "operator",
+      "type": "string",
+      "multivalued": false
+    },
+    {
+      "id": "eventCondition",
+      "type": "Condition",
+      "multivalued": false
+    }
+  ]
+}

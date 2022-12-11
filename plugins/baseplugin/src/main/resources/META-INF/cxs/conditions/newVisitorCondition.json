@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "id": "newVisitorCondition",
+    "name": "newVisitorCondition",
+    "description": "",
+    "systemTags": [
+      "availableToEndUser",
+      "visitBased",
+      "profileTags",
+      "event",
+      "condition",
+      "sessionCondition"
+    ],
+    "readOnly": true
+  },
+  "parentCondition": {
+    "type": "booleanCondition",
+    "parameterValues": {
+      "operator": "or",
+      "subConditions": [
+        {
+          "type": "sessionPropertyCondition",
+          "parameterValues": {
+            "propertyName": "profile.properties.previousVisit",
+            "comparisonOperator": "missing"
+          }
+        },
+        {
+          "type": "sessionPropertyCondition",
+          "parameterValues": {
+            "propertyName": "profile.properties.previousVisit",
+            "comparisonOperator": "lessThan",
+            "propertyValueDateExpr": "script::'now-'+since+'d'"
+          }
+        }
+      ]
+    }
+  },
+
+  "parameters": [
+    {
+      "id": "since",
+      "type": "integer",
+      "multivalued": false
+    }
+  ]
+}

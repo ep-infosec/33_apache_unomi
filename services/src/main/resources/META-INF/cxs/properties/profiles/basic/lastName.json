@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "id": "lastName",
+        "name": "Last name",
+        "systemTags": [
+            "properties",
+            "profileProperties",
+            "basicProfileProperties",
+            "personalIdentifierProperties"
+        ]
+    },
+    "type": "string",
+    "defaultValue": "",
+    "automaticMappingsFrom": [
+        "j:lastName"
+    ],
+    "rank": "102.0"
+}

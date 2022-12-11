@@ -1,0 +1,19 @@
+{
+    "metadata": {
+        "id": "city",
+        "name": "City",
+        "systemTags": [
+            "properties",
+            "profileProperties",
+            "contactProfileProperties",
+            "profileTags",
+            "autocompleted"
+        ]
+    },
+    "type": "string",
+    "defaultValue": "",
+    "automaticMappingsFrom": [
+        "j:city"
+    ],
+    "rank": "304.0"
+}

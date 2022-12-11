@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "id": "firstName",
+        "name": "First name",
+        "systemTags": [
+            "properties",
+            "profileProperties",
+            "basicProfileProperties",
+            "personalIdentifierProperties"
+        ]
+    },
+    "type": "string",
+    "defaultValue": "",
+    "automaticMappingsFrom": [
+        "j:firstName"
+    ],
+    "rank": "101.0"
+}

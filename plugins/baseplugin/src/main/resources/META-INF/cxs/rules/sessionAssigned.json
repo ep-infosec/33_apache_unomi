@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "id": "_ajhg9u2s5_sessionAssigned",
+    "name": "Session assigned to a profile",
+    "description": "Update profile visit information",
+    "readOnly":true
+  },
+
+  "condition": {
+    "type": "booleanCondition",
+    "parameterValues": {
+      "subConditions":[
+        {
+          "type": "eventTypeCondition",
+          "parameterValues": {
+            "eventTypeId": "sessionCreated"
+          }
+        },
+        {
+          "type": "eventTypeCondition",
+          "parameterValues": {
+            "eventTypeId": "sessionReassigned"
+          }
+        }
+
+        ],
+      "operator":"or"
+
+    }
+  },
+
+  "actions": [
+    {
+      "parameterValues": {},
+      "type": "evaluateVisitPropertiesAction"
+    },
+    {
+      "parameterValues": {
+        "propertyName": "nbOfVisits",
+        "storeInSession": false
+      },
+      "type": "incrementPropertyAction"
+    }
+  ]
+}
